@@ -6,6 +6,8 @@ import Home from './Components/Home/Home';
 import Blogs from './Components/Blogs/Blogs';
 import LogIn from './Components/LogIn/LogIn';
 import Register from './Components/Register/Register';
+import ManageItem from './Components/ManageItem/ManageItem';
+import RequireAuth from './Components/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -16,6 +18,9 @@ function App() {
         <Route path='/Blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/LogIn' element={<LogIn></LogIn>}></Route>
         <Route path='/Register' element={<Register></Register>}></Route>
+        <Route path='/ManageItem' element={<RequireAuth>
+          <ManageItem></ManageItem>
+        </RequireAuth>}></Route>
       </Routes>
 
     </div >
