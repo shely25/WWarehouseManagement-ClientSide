@@ -1,0 +1,10 @@
+.Width {
+    width: 25%;
+    margin: 25px auto;
+}
+
+@media only screen and (max-width:678px) {
+    .Width {
+        width: 75%;
+    }
+}
