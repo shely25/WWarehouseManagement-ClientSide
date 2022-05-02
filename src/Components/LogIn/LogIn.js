@@ -24,9 +24,7 @@ const LogIn = () => {
     );
     let errorElement2
     if (error || error2) {
-        errorElement2 = <div>
-            <p className='text-center text-danger'>Error: {error.message}</p>
-        </div>
+        errorElement2 = error?.message || error2?.message
     }
     if (user) {
         navigate(from, { replace: true });
@@ -54,7 +52,7 @@ const LogIn = () => {
                 </Form.Group>
                 <input className='btn btn-primary' type="submit" value="Log In" />
             </Form>
-            {errorElement2}
+            <p> {errorElement2}</p>
             <p className='text-center my-2'>Are you new here?<Link className='text-decoration-none' to='/Register'>Please Register</Link></p>
             <p className='text-center my-2'>Forgate Password?<button onClick={handleResetPassword} className='btn btn-link text-decoration-none'>Reset Password</button></p>
             <SocialLogIn></SocialLogIn>

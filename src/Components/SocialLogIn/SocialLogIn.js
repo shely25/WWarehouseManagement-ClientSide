@@ -13,9 +13,8 @@ const SocialLogIn = () => {
     const from = location.state?.from?.pathname || '/'
     let errorElement;
     if (error || error1) {
-        errorElement = <div>
-            <p className='text-center text-danger'>Error: {error.message}</p>
-        </div>
+        errorElement = error?.message || error1?.message
+
     }
     if (user || user1) {
         navigate(from, { replace: true })
@@ -27,7 +26,7 @@ const SocialLogIn = () => {
                 <p style={{ margin: '1px 8px 0 8px' }}>Or</p>
                 <div style={{ border: '1px solid blue', width: '150px', borderRadius: '4px' }}></div>
             </div>
-            {errorElement}
+            <p>{errorElement}</p>
             <div className='Width'>
                 <GoogleLoginButton onClick={() => signInWithGoogle()} />
                 <GithubLoginButton onClick={() => signInWithGithub()} />
