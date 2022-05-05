@@ -14,11 +14,11 @@ const Header = () => {
         <div className='sticky-top'>
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
-                    <Navbar.Brand as={Link} to='/'>Fasion Franzy</Navbar.Brand>
+                    <Navbar.Brand as={Link} to='/home'>Fasion Franzy</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link as={Link} to='/Inventory'>Inventory</Nav.Link>
+                            <Nav.Link href='/home#inventory'>Inventory</Nav.Link>
                             <Nav.Link as={Link} to="Blogs">Blogs</Nav.Link>
                         </Nav>
                         <Nav>
