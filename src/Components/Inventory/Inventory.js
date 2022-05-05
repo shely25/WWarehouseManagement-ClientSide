@@ -3,7 +3,7 @@ import './Inventory.css'
 import useInventory from '../../hooks/useInventory';
 
 const Inventory = () => {
-    const [products, setProducts] = useInventory();
+    const [products, setProducts] = useInventory()
     return (
         <div id='inventory'>
             <h1 className='text-center mt-5' style={{ color: 'orange' }}>Inventory</h1>
