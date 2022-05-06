@@ -2,7 +2,7 @@ import { queryAllByAttribute } from '@testing-library/react';
 import React, { useState } from 'react';
 
 const AddNewItem = () => {
-    const [item, setItem] = useState({});
+    //const [item, setItem] = useState({});
     const handleNewItem = event => {
         event.preventDefault();
         const name = event.target.name.value;
@@ -11,7 +11,8 @@ const AddNewItem = () => {
         const supplier_name = event.target.supplier_name.value;
         const description = event.target.description.value;
         const image = event.target.image.value;
-        setItem({ name, price, quantity, supplier_name, description, image })
+        const item = { name, price, quantity, supplier_name, description, image }
+        console.log(item)
         fetch('http://localhost:5000/inventory', {
             method: 'POST',
             headers: {
@@ -23,7 +24,7 @@ const AddNewItem = () => {
             .then(data => {
                 console.log('Success:', data);
                 alert("New User added successfully")
-                //event.target.reset()
+                event.target.reset()
             })
     }
 
