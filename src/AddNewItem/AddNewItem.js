@@ -23,7 +23,7 @@ const AddNewItem = () => {
             .then(data => {
                 console.log('Success:', data);
                 alert("New User added successfully")
-                event.target.reset()
+                //event.target.reset()
             })
     }
 

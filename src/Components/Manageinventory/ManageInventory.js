@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
+import useInventory from '../../hooks/useInventory';
 
 const ManageInventory = () => {
     const [product, setProduct] = useState({})
     const param = useParams();
+    const [products, setProducts] = useInventory()
     const url = `http://localhost:5000/inventory/${param.id}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
 
-    }, [product.quantity])
+    }, products)
     const { _id, name, image, description, price, supplier_name, details } = product
     let { quantity } = product
     const handleDelivered = () => {
