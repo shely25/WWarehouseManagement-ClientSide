@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogIn from '../SocialLogIn/SocialLogIn';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
@@ -9,6 +9,8 @@ const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/'
     const [
         createUserWithEmailAndPassword,
         user,
@@ -21,12 +23,23 @@ const Register = () => {
             <p className='text-center text-danger'>Error: {error.message}</p>
         </div>
     }
-    if (user) {
-        navigate('/')
-    }
     const handleRegister = event => {
         event.preventDefault()
         createUserWithEmailAndPassword(email, password)
+        fetch('http://localhost:5000/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email }),
+        })
+            .then(response => response.json())
+            .then(data => {
+                localStorage.setItem('token', data.token)
+                console.log(data.token)
+
+            })
+        navigate(from, { replace: true });
     }
     return (
         <div>

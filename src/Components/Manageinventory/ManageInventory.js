@@ -37,6 +37,29 @@ const ManageInventory = () => {
             })
 
     }
+
+    const handleRestock = event => {
+        event.preventDefault()
+        let updateQuantity
+        const number = event.target.restock.value
+        console.log(number)
+        quantity += parseInt(number)
+        updateQuantity = { quantity }
+        console.log(updateQuantity)
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(updateQuantity),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                event.target.reset()
+            })
+
+    }
     return (
 
         <div>
@@ -52,8 +75,15 @@ const ManageInventory = () => {
                     <p className="card-text">{details}</p>
                     <div className='d-flex justify-content-between mt-5'>
                         <Button onClick={handleDelivered}>Delivered</Button>
-                        <Link className='btn btn-primary' to='/ManageItem'>Mange Item</Link>
+                        <Link className='btn btn-primary' to='/ManageItem'>Manage Item</Link>
+
                     </div>
+                    <form className='mt-5' onSubmit={handleRestock}>
+                        <input type="number" name='restock' placeholder='Restock The Item' />
+                        <input type="submit" className='btn-info' value='Add Item' />
+                    </form>
+
+
                 </div>
             </div>
 

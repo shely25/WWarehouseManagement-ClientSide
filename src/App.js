@@ -12,6 +12,7 @@ import ManageInventory from './Components/Manageinventory/ManageInventory';
 import AddNewItem from './AddNewItem/AddNewItem';
 import NotFound from './NotFound/NotFound';
 import MyItem from './Components/Myitem/MyItem';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         </RequireAuth>}></Route>
         <Route path='/*' element={<NotFound></NotFound>}></Route>
       </Routes >
+      <Footer></Footer>
     </div >
   );
 }
