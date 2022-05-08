@@ -26,12 +26,24 @@ const LogIn = () => {
     if (error || error2) {
         errorElement2 = error?.message || error2?.message
     }
-    if (user) {
-        navigate(from, { replace: true });
-    }
-    const handleLogin = event => {
+
+    const handleLogin = async (event) => {
         event.preventDefault()
-        signInWithEmailAndPassword(email, password)
+        await signInWithEmailAndPassword(email, password)
+        fetch('http://localhost:5000/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email }),
+        })
+            .then(response => response.json())
+            .then(data => {
+                localStorage.setItem('token', data.token)
+                console.log(data.token)
+
+            })
+        navigate(from, { replace: true });
     }
     const handleResetPassword = async () => {
         await sendPasswordResetEmail(email);

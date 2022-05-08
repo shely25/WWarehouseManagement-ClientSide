@@ -28,7 +28,7 @@ const ProductsTable = (props) => {
                 <p><span>Supplier Name : </span>{supplier_name}</p>
                 <p>{description}</p>
             </div>
-            <div className='d-flex align-items-center w-50'> <button onClick={() => handleDelete(_id)} className='btn btn-danger w-75 mx-auto'>Delete Item</button></div>
+            <div className='d-flex align-items-center delete-button'> <button onClick={() => handleDelete(_id)} className='btn btn-danger w-75 mx-auto'>Delete Item</button></div>
         </div>
     );
 };

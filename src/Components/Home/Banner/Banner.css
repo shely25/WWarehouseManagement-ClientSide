@@ -2,6 +2,7 @@
     height: 500px;
 }
 
-.captio {
+.caption {
     color: #323b52;
+    font-weight: 600;
 }

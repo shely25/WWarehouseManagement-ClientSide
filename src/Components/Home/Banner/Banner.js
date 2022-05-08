@@ -17,7 +17,7 @@ const Banner = () => {
                     />
                     <Carousel.Caption>
                         <h3>Three Piece Collection</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <p> Buy bangladeshi salwar kameez design 2022 & fashionable three piece at ... Three Piece For Women Ladies Collection Shalwar Kameez.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -27,9 +27,9 @@ const Banner = () => {
                         alt="Second slide"
                     />
 
-                    <Carousel.Caption>
-                        <h3 className='captio'>Brand New Ladies Gawn Collection</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <Carousel.Caption className='caption'>
+                        <h3>Brand New Ladies Gawn Collection</h3>
+                        <p>Welcome to the Gown World BD. Here you can get exclusive dresses and gorgeous wearable. You can have awesome collections of ready-made dresses from us.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -41,7 +41,7 @@ const Banner = () => {
 
                     <Carousel.Caption>
                         <h3>Collections For Kids</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <p>Choose from a range of classy party wear for your little ones from Aarong. Dressy Wear for your little one at their favorite parties.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

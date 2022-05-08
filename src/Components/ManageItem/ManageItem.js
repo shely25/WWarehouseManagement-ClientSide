@@ -6,6 +6,15 @@ import { Link } from 'react-router-dom';
 
 const ManageItem = () => {
     const [products, setProducts] = useInventory()
+    // const [myitem, setMyitem] = useState([])
+
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/myitem?{}')
+    //         .then(res => res.json)
+    //         .then(data => setMyitem(data))
+    // }, [])
+    // console.log(myitem)
+    // const allitems = [...products, ...myitem]
     return (
         <div>
             <h1 className='text-center my-5 text-info'>Products</h1>
