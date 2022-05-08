@@ -16,7 +16,7 @@ const MyItem = () => {
         })
             .then(res => res.json())
             .then(data => setItems(data))
-    }, items)
+    }, [])
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure??want to delete');
         if (proceed) {
@@ -31,6 +31,7 @@ const MyItem = () => {
                     }
 
                 })
+            window.location.reload()
 
         }
     }
