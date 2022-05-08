@@ -26,7 +26,7 @@ const Register = () => {
     const handleRegister = event => {
         event.preventDefault()
         createUserWithEmailAndPassword(email, password)
-        fetch('http://localhost:5000/register', {
+        fetch('https://infinite-everglades-79804.herokuapp.com/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

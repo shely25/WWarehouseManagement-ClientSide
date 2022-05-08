@@ -7,7 +7,7 @@ const ManageInventory = () => {
     const [product, setProduct] = useState({})
     const param = useParams();
     const [products, setProducts] = useInventory()
-    const url = `http://localhost:5000/inventory/${param.id}`
+    const url = `https://infinite-everglades-79804.herokuapp.com/inventory/${param.id}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

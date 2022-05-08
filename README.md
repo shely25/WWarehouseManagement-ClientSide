@@ -17,3 +17,9 @@
 
 # github Link for Server side
 [https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-shely25]
+
+# Heroku Link
+[https://infinite-everglades-79804.herokuapp.com/]
+
+# Client Side Live Link
+[https://dress-warehouse-management.web.app/]

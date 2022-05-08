@@ -30,7 +30,7 @@ const LogIn = () => {
     const handleLogin = async (event) => {
         event.preventDefault()
         await signInWithEmailAndPassword(email, password)
-        fetch('http://localhost:5000/login', {
+        fetch('https://infinite-everglades-79804.herokuapp.com/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

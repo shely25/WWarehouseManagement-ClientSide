@@ -9,7 +9,7 @@ const ManageItem = () => {
     // const [myitem, setMyitem] = useState([])
 
     // useEffect(() => {
-    //     fetch('http://localhost:5000/myitem?{}')
+    //     fetch('https://infinite-everglades-79804.herokuapp.com/myitem?{}')
     //         .then(res => res.json)
     //         .then(data => setMyitem(data))
     // }, [])

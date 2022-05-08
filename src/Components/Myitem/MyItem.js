@@ -5,7 +5,7 @@ import auth from '../../firebase.init';
 const MyItem = () => {
     const [items, setItems] = useState([]);
     const [user] = useAuthState(auth)
-    const url = 'http://localhost:5000/myitem?' + new URLSearchParams({
+    const url = 'https://infinite-everglades-79804.herokuapp.com/myitem?' + new URLSearchParams({
         email: user.email
     }).toString()
     useEffect(() => {
@@ -20,7 +20,7 @@ const MyItem = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure??want to delete');
         if (proceed) {
-            const url = `http://localhost:5000/myitem/${id}`
+            const url = `https://infinite-everglades-79804.herokuapp.com/myitem/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

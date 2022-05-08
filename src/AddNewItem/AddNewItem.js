@@ -14,7 +14,7 @@ const AddNewItem = () => {
         const image = event.target.image.value;
         const item = { name, email, price, quantity, supplier_name, description, image }
         console.log(item)
-        // fetch('http://localhost:5000/inventory', {
+        // fetch('https://infinite-everglades-79804.herokuapp.com/inventory', {
         //     method: 'POST',
         //     headers: {
         //         'Content-Type': 'application/json',
@@ -25,7 +25,7 @@ const AddNewItem = () => {
         //     .then(data => {
         //         console.log('Success:', data);
         //     })
-        fetch('http://localhost:5000/myitem', {
+        fetch('https://infinite-everglades-79804.herokuapp.com/myitem', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
