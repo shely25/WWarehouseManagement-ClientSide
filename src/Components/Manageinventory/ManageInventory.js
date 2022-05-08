@@ -35,6 +35,7 @@ const ManageInventory = () => {
             .then(data => {
                 console.log('Success:', data);
             })
+        window.location.reload()
 
     }
 
@@ -58,6 +59,7 @@ const ManageInventory = () => {
                 console.log('Success:', data);
                 event.target.reset()
             })
+        window.location.reload()
 
     }
     return (

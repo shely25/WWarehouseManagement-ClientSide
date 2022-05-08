@@ -16,6 +16,7 @@ const ProductsTable = (props) => {
                     }
 
                 })
+            window.location.reload()
 
         }
     }
